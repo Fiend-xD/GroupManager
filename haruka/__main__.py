@@ -33,7 +33,7 @@ Made By :- [Fiend 🇮🇳](t.me/Fiend_XY)
 
 Click /help or Help button below to find out more about how to use me to my full potential.
 
- Add me to a group by clicking [here](http://t.me/tg_GroupManagerBot?startgroup=true).
+ Add me to a group by clicking [here](http://t.me/Frenzy_Robot?startgroup=true).
 """
 
 
