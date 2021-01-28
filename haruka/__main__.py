@@ -24,16 +24,16 @@ PM_START = """Hello {}, my name is {}!
 
 You know how hard it is sometimes to manage group so here is the solution for you
 
-I'm group manager bot and Anti-spam for RR Players🃏
+I can do a lot of cool stuffs, here's a short list:
+• I can restrict users.
+• I can greet users with customizable welcome messages and even set a group's rules.
+• I have an advanced anti-flood system.
+• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
+• I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
+• I check for admins' permissions before executing any command.
+…and much more stuffs, check out /help!
 
-Activate Anti-spam protection in your BM by this command : 
-/antispam on 
-
-Made By :- [Fiend 🇮🇳](t.me/Fiend_XY)
-
-Click /help or Help button below to find out more about how to use me to my full potential.
-
- Add me to a group by clicking [here](http://t.me/Frenzy_Robot?startgroup=true).
+All of the possible commands can be used properly if I am an administrator in your group otherwise, I will not able to restrict users, send certain predefined actions etc.
 """
 
 
@@ -154,6 +154,8 @@ def send_start(bot, update):
     keyboard = [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_")]]
     keyboard += [[InlineKeyboardButton(text="🛠 Reporting", callback_data="cntrl_panel_M"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
+     [InlineKeyboardButton(text="Add me to your chat!",
+url="t.me/Frenzy_robot?startgroup=true".format(bot.username)),
 
     update.effective_message.reply_text(PM_START.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
@@ -169,7 +171,7 @@ def control_panel(bot, update):
         update.effective_message.reply_text("Contact me in PM to access the control panel.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="Control Panel",
-                                                                       url=f"t.me/{bot.username}?start=controlpanel")]]))
+                                                                       url="t.me/{frenzy_robot}?start=controlpanel")]]))
         return
 
     #Support to run from command handler
@@ -184,7 +186,7 @@ def control_panel(bot, update):
 
         LOGGER.info(query.data)
     else:
-        M_match = "ThaNos is the best bot" #LMAO, don't uncomment
+        M_match = "Frenzy is the best bot" #LMAO, don't uncomment
 
     if M_match:
         text = "*Control panel* 🛠"
